@@ -13,14 +13,15 @@ const App = () => {
   ]
    
   const [selected, setSelected] = useState(0)
-  const [vote, setVote] = useState([0,0,0,0,0])
- 
-
+  const [vote, setVote] = useState(Array(anecdotes.length - 1).fill(0))
+/*  if(vote.empty){
+  vote = Array(anecdotes.length - 1).fill(0)
+ } */
   const copy = [...vote]
 // incrémenter la valeur en position 2 de un
 //copy[2] += 1  
  
-  let randomSelect = Math.floor(Math.random() * (anecdotes.length - 1 ))
+  let randomSelect = Math.floor(Math.random() * (anecdotes.length -2 ))
 
  const handleNextAnecdots = ()=>{
    console.log(randomSelect)
