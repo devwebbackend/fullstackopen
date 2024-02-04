@@ -13,12 +13,16 @@ const handleGood = ()=> {setGood(good + 1)
 console.log(good)
 }
 const Statistics = ({all,average,positive}) => {
-return (
-  <><p>all {all}</p>
+
+ if(good !== 0 || bad !== 0 || neutral !== 0)  
+  return ( <><p>good{good} </p>
+  <p>neutral{neutral} </p>
+  <p>bad{bad} </p>
+  <p>all {all}</p>
   <p>{average}</p>
-  <p>{positive}</p>
-  </>
-)
+  <p>{positive}</p></>)
+else return(<><p>No feedback</p></>)
+ 
 }
 
 const handleBad = ()=> setBad(bad + 1)
@@ -47,13 +51,13 @@ const positive = ()=>{
       <Button text='neutral' onClick={handleNeutral}/>
       <Button text='bad' onClick={handleBad}/>
       <h2>statistics</h2>
+     {/*  <p>good{good} </p>
+      <p>neutral{neutral} </p>
+      <p>bad{bad} </p>
+    
+      <p>No feedback given</p> */}
+      <Statistics all={good+bad+neutral}  average={average()} positive={positive()}/>
       
-      
-      if({good} !== 0 || {bad} !== 0 || {neutral} !== 0)
-      <Statistics all={good+bad+neutral} positive={positive()} average={average()}/>
-      else
-      <p>No feedback given</p>
-
     </>
   )
 }
