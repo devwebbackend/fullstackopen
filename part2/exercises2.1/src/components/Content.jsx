@@ -8,7 +8,7 @@ const Content = ({parts}) => {
 {parts.map(part => {return(<Part name={part.name} key = {part.id}/>)})}
 
     </ul>
-    
+  
     </>
   )
 }
