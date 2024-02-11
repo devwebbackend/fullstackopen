@@ -15,7 +15,7 @@ const App = () => {
   const [selected, setSelected] = useState(0)
 
  
-  let randomSelect = Math.floor(Math.random() * (anecdotes.length - 2))
+  let randomSelect = Math.floor(Math.random() * anecdotes.length)
 
  const handleNextAnecdots = ()=>{
    console.log(randomSelect)

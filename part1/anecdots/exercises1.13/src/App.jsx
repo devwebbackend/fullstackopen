@@ -21,7 +21,7 @@ const App = () => {
 // incrémenter la valeur en position 2 de un
 //copy[2] += 1  
  
-  let randomSelect = Math.floor(Math.random() * (anecdotes.length -2 ))
+  let randomSelect = Math.floor(Math.random() * (anecdotes.length))
 
  const handleNextAnecdots = ()=>{
    console.log(randomSelect)
